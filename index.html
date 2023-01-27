@@ -3,20 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0">
     <title>Min's Weather App</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
     <style>
-       .temperature-text {
-         font-weight:  bold;
-         color: blue;
-         font-size: x-large;
-       } 
+        body {
+            height: 700px;
+            width: 370px;
+            border: 2px solid;
+            border-radius: 12px;
+        }
+
+        h1 {
+            font-size: 80px;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            border-radius: 12px 12px;
+            background-color: #FAC749;
+
+        }
+        .half-containers {
+            flex: 1;
+            overflow: auto;
+            justify-content: space-between;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+        }
+        .location {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            background-color: #FAC749;
+        }
+        .temperature {
+            flex: 4;
+            display: flex;
+            justify-content: center;
+            background-color: #FAC749;
+        }
+        .three-icon-containers {
+            flex: 2;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
+            background-color: #8390FA;
+        }
+        .icon-container {
+            overflow: auto;
+            border: 5px solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .img-sunny {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 50px;
+        }
+        .dog-face {
+            display: flex;
+            flex: 4;
+            justify-content: center;
+            align-items: center;
+        }
+        .img-dog {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 350px;
+        }
+        .message {
+            display: flex;
+            flex: 1;
+            justify-content: center;
+            background-color: #8390FA;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="temperature-text">50</div>
+    <div class="main-container">
+        <div class="half-containers">
+            <div class="location">
+                <h4> Philadelphia, PA</h4>
+            </div>
+            <div class="temperature">
+                <h1> 63 ℉</h1>
+            </div>
+            <div class="three-icon-containers">
+                <div class="icon-container"><img src="./sunny.png" class="img-sunny"></img><p>Sunny!</p></div>
+                <div class="icon-container"><img src="./wind.jpeg" class="img-sunny"></img><p>Little Windy!</p></div>
+            </div>
+        </div>
+        <div class="half-containers">
+            <div class="dog-face">
+                <img src="./smileydog.jpeg" class="img-dog"/>
+            </div>
+            <div class="message">
+                <h4>Good to walk for next 3 hours</h4>
+            </div>
+        </div>
     </div>
 </body>
 </html>
+
+
+<!-- https://www.geeksforgeeks.org/how-to-make-a-div-span-two-rows-in-a-grid-using-css/ -->
